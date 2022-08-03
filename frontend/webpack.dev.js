@@ -22,7 +22,16 @@ module.exports = merge(common, {
           "style-loader", 
           "css-loader",
         ]
-      }
+      },
+      {
+        test: /\.less$/i,
+        use: [
+          // compiles Less to CSS
+          "style-loader",
+          "css-loader",
+          "less-loader",
+        ],
+      },
     ]
   }
 });
